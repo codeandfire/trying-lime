@@ -35,7 +35,7 @@ class        wordnet id      probability
 -----------  ------------  -------------
 house_finch  n01532829          0.997684
 Passing perturbations to AlexNet ...
-100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00,  7.07it/s]
+100%|█████████████████████████████████████████████| 4/4 [00:00<00:00,  6.83it/s]
 Generating explanations ...
 Explanation plot saved to explanation_house_finch_51694033_d5a7fd6f12.png
 ```
@@ -94,6 +94,6 @@ To the best of my knowledge, this script matches the original algorithm exactly,
 
 The output from this script should typically exactly match the output from the LIME package.
 You can verify this as follows.
-The script `verify_lime.py` is a script that uses the official LIME package and follows their official tutorial for image explanations (using PyTorch), [found here](https://github.com/marcotcr/lime/blob/master/doc/notebooks/Tutorial%20-%20images%20-%20Pytorch.ipynb).
+The script `verify_lime.py` is a script that uses the official LIME package and follows their official tutorial notebook for image explanations (using PyTorch), [found here](https://github.com/marcotcr/lime/blob/master/doc/notebooks/Tutorial%20-%20images%20-%20Pytorch.ipynb).
 You can check that the script is exactly the same as the notebook, with only a few minor changes.
 Then, you can run `verify_lime.py` with the same image and the same configuration options as `run_lime.py`, and check that the resulting explanation image is very, very similar.
