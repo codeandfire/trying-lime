@@ -18,7 +18,8 @@ from torchvision import models, transforms
 from tqdm import tqdm
 
 # command-line arguments.
-parser = argparse.ArgumentParser(description=__doc__)
+parser = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument(
     'image_path', type=str,
     help='image on which to carry out inference and prediction')
@@ -33,7 +34,7 @@ parser.add_argument(
     help='batch size to be used while passing perturbations to the AlexNet model')
 parser.add_argument(
     '--segments', type=int, default=5,
-    help='number of segments to be shown in the explanation')
+    help='number of segments to be highlighted in the explanation')
 parser.add_argument(
     '--hide-colour', type=str, choices=['black', 'white', 'mean'], default='mean',
     help='colour used for hiding segments while generating perturbations')
