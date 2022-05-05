@@ -1,0 +1,8 @@
+joblib
+numpy
+pillow
+scikit-image==0.19.2
+scikit-learn
+scipy
+tabulate
+tqdm
